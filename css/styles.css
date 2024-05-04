@@ -1,0 +1,352 @@
+:root {
+    --primary-font: "Roboto";
+    --primary-font-color: #434455;
+    --logo-font: "Raleway";
+    --logo-text-color-prefix: #4D5AE5;
+    --logo-text-color-light: #F4F4FD;
+    --logo-text-color-dark: #2E2F42;
+    --header-background: #FFFFFF;
+    --header-border: #E7E9FC;
+    --dark-background: var(--logo-text-color-dark);
+    --footer-text-color: var(--logo-text-color-light);
+    --on-hover: #404BBF;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.global{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.container {
+    width: 1158px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden{
+    display: none;
+}
+
+.header {
+    background-color: var(--header-background);
+    border: 1px solid var(--header-border);
+    max-width: 100%;
+}
+
+.header-element-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.logo-text {
+    font-family: var(--logo-font);
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.logo-text-prefix {
+    color: var(--logo-text-color-prefix);
+}
+
+.logo-dark {
+    background-color: var(--header-background);
+    color: var(--logo-text-color-dark);
+}
+
+.logo-light {
+    background-color: var(--footer-background);
+    color: var(--logo-text-color-light);
+}
+
+.header-navigation-wrapper {
+    display: flex;
+    gap: 76px;
+}
+
+.header-navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.header-text {
+    color: var(--primary-font-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.header-address {
+    color: var(--primary-font-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+}
+
+.header-text:hover,
+.header-text:active {
+    color: var(--on-hover);
+}
+
+.address-container {
+    display: flex;
+    gap: 40px;
+}
+
+.list-item {
+    list-style-type: none;
+}
+
+.footer-text {
+    color: var(--footer-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+    max-width: 264px;
+}
+
+.footer-card {
+    background-color: var(--dark-background);
+}
+
+.footer-wrapper{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.banner {
+    background-color: var(--dark-background);
+    padding-top: 188px;
+    padding-bottom: 188px;
+}
+
+.banner-wrapper {
+    max-width: 496px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    margin-left: auto;
+margin-right: auto;
+}
+
+.banner-text {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 60px;
+    text-align: center;
+    color: var(--header-background);
+}
+
+.main-order-service-btn {
+    background-color: var(--logo-text-color-prefix);
+    color: var(--header-background);
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    height: 56px;
+    width: 169px;
+}
+
+.main-order-service-btn:hover,
+.main-order-service-btn:active {
+    background-color: var(--header-border);
+    color: var(--logo-text-color-prefix);
+    cursor: pointer;
+}
+
+.main-features-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.main-features {
+    display: flex;
+    gap: 24px;
+}
+
+.main-feature-item {
+    width: 264px;
+}
+
+.main-feature-title-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main-feature-content-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.main-pictures-container {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 120px;
+}
+
+.work-example-header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 72px;
+    text-align: center;
+}
+
+.main-team-wrapper {
+    background-color: var(--footer-text-color);
+    padding-bottom: 120px;
+    padding-top: 120px;
+}
+
+.main-team-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    width: calc(4 * 264px + 3 * 24px);
+}
+
+.main-team-container .list-item {
+    border-radius: 0 0 4px 4px;
+    background-color: var(--header-background);
+}
+
+.main-person-data {
+    padding: 32px 16px;
+    text-align: center;
+}
+
+.our-team-header {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+    padding-bottom: 72px;
+    text-align: center;
+}
+
+.our-team-person-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 8px;
+}
+
+.our-team-person-position {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.portfolio-navigation-container{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 72px;
+    justify-content: center;
+}
+
+.portfolio-navigation-btn {
+    background-color: var(--header-border);
+    color: var(--logo-text-color-prefix);
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    padding: 12px 24px;
+}
+
+.portfolio-navigation-btn:hover,
+.portfolio-navigation-btn:active {
+    color: var(--header-background);
+    background-color: var(--on-hover);
+    cursor: pointer;
+}
+
+.portfolio-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-wrapper{
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+
+.card-container{
+    border-bottom: 1px solid var(--header-border);
+    border-left: 1px solid var(--header-border);
+    border-right: 1px solid var(--header-border);
+}
+
+.card-aware{
+    padding: 32px 16px;
+}
+
+.card:link {
+    text-decoration: none;
+}
+
+.card-title {
+    color: var(--logo-text-color-dark);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+.card-desc {
+    color: var(--logo-text-color-dark);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
