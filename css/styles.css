@@ -10,6 +10,9 @@
     --dark-background: var(--logo-text-color-dark);
     --footer-text-color: var(--logo-text-color-light);
     --on-hover: #404BBF;
+    --overlay: #3f51b5;
+    --client-logo: #8E8F99;
+    --dark: rgba(46, 47, 66, 0.7);
 }
 
 body {
@@ -35,10 +38,10 @@ ol {
     padding-left: 0;
 }
 
-.global{
+.global {
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
 .container {
@@ -48,7 +51,7 @@ ol {
     margin-right: auto;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -141,13 +144,17 @@ ol {
     background-color: var(--dark-background);
 }
 
-.footer-wrapper{
+.footer-wrapper {
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex;
+    gap: 120px;
 }
 
 .banner {
     background-color: var(--dark-background);
+    background-image: linear-gradient(var(--dark), var(--dark)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
     padding-top: 188px;
     padding-bottom: 188px;
 }
@@ -159,7 +166,7 @@ ol {
     align-items: center;
     gap: 48px;
     margin-left: auto;
-margin-right: auto;
+    margin-right: auto;
 }
 
 .banner-text {
@@ -252,7 +259,7 @@ margin-right: auto;
 }
 
 .main-person-data {
-    padding: 32px 16px;
+    padding: 32px 16px 8px;
     text-align: center;
 }
 
@@ -277,7 +284,7 @@ margin-right: auto;
     line-height: 24px;
 }
 
-.portfolio-navigation-container{
+.portfolio-navigation-container {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -299,12 +306,15 @@ margin-right: auto;
 
 .portfolio-navigation-btn:hover,
 .portfolio-navigation-btn:active {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.34), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
     color: var(--header-background);
     background-color: var(--on-hover);
     cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-cards-container{
+.portfolio-cards-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -313,19 +323,19 @@ margin-right: auto;
     column-gap: 24px;
 }
 
-.portfolio-wrapper{
+.portfolio-wrapper {
     padding-top: 96px;
     padding-bottom: 120px;
 }
 
 
-.card-container{
+.card-container {
     border-bottom: 1px solid var(--header-border);
     border-left: 1px solid var(--header-border);
     border-right: 1px solid var(--header-border);
 }
 
-.card-aware{
+.card-aware {
     padding: 32px 16px;
 }
 
@@ -349,4 +359,199 @@ margin-right: auto;
     line-height: 24px;
     letter-spacing: 0.02em;
     text-align: left;
+}
+
+
+
+
+.current {
+    color: var(--on-hover);
+    padding-bottom: 25px;
+    border-bottom: var(--on-hover) solid 4px;
+}
+
+.main-feature-logo {
+    background-color: var(--logo-text-color-light);
+    height: 112px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.main-feature-logo-logo {
+    position: absolute;
+    top: 25%;
+    right: 37%;
+}
+
+.our-team-social-networks {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+    justify-content: center;
+}
+
+.our-team-social-network {
+    position: relative;
+    background-color: var(--logo-text-color-prefix);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    fill: var(--header-background);
+}
+
+.our-team-social-network:hover {
+    background-color: var(--on-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-team-social-network-logo {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+.our-team-shadow,
+.shadow-item:hover {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
+}
+
+.our-customer-container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.our-customers-backet {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.our-customer {
+    position: relative;
+    border: var(--client-logo) solid 1px;
+    border-radius: 4px;
+    height: 88px;
+    width: 168px;
+}
+
+.our-customer-logo {
+    position: absolute;
+    top: 17%;
+    right: 17%;
+    fill: var(--client-logo);
+}
+
+.our-customers-title {
+    text-align: center;
+    padding-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.footer-social-networks {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+    justify-content: center;
+}
+
+.footer-social-network {
+    position: relative;
+    background-color: var(--logo-text-color-prefix);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    fill: var(--header-background);
+}
+
+.footer-social-network:hover {
+    background-color: var(--on-hover);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-network-logo {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+.footer-social {
+    color: var(--footer-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 16px;
+}
+
+.decoration {
+    position: relative;
+    overflow: hidden;
+}
+
+.decoration:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    color: var(--header-background);
+    opacity: 0.7;
+
+    transform: translateY(200%);
+    transition: transform 250ms ease-in-out;
+}
+
+/* Modal */
+.close-button {
+position: absolute;
+top: 24px;
+right: 24px;
+
+    background-color: var(--header-border);
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    border-color: var(--header-border);
+    padding: 0;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: var(--dark);
+    backdrop-filter: 2px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+    transition: transform 1000ms;
+    transition-property: opacity, visibility;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 408px;
+    min-height: 584px;
+    background-color: var(--header-background);
+    border-radius: 4px;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
