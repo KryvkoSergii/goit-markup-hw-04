@@ -154,6 +154,7 @@ ol {
 .banner {
     background-color: var(--dark-background);
     background-image: linear-gradient(var(--dark), var(--dark)), url(../images/people-office.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     padding-top: 188px;
     padding-bottom: 188px;
@@ -305,7 +306,9 @@ ol {
 }
 
 .portfolio-navigation-btn:hover,
-.portfolio-navigation-btn:active {
+.portfolio-navigation-btn:active,
+.portfolio-navigation-btn:focus
+{
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.34), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
     color: var(--header-background);
     background-color: var(--on-hover);
@@ -381,12 +384,16 @@ ol {
     position: absolute;
     top: 25%;
     right: 37%;
+    height: 64px;
+    width: 64px;
 }
 
 .our-team-social-networks {
     display: flex;
+    flex-direction: row;
     gap: 24px;
-    padding-bottom: 32px;
+    margin-top: 8px;
+    margin-bottom: 32px;
     justify-content: center;
 }
 
@@ -411,16 +418,17 @@ ol {
     position: absolute;
     top: 30%;
     right: 30%;
+    fill: var(--header-background);
 }
 
 .our-team-shadow,
-.shadow-item:hover {
+.shadow-item:hover, .shadow-item:active, .shadow-item:focus {
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 }
 
 .our-customer-container {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .our-customers-backet {
@@ -437,16 +445,28 @@ ol {
     width: 168px;
 }
 
+.our-customer:hover {
+    border: var(--on-hover) solid 1px;
+    fill: var(--on-hover);
+}
+
 .our-customer-logo {
     position: absolute;
-    top: 17%;
-    right: 17%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 56px;
+    width: 104px;
     fill: var(--client-logo);
+}
+
+.our-customer-logo:hover{
+    fill: var(--on-hover);
 }
 
 .our-customers-title {
     text-align: center;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
     font-weight: 700;
     font-size: 36px;
     line-height: 40px;
@@ -515,16 +535,32 @@ ol {
 
 /* Modal */
 .close-button {
-position: absolute;
-top: 24px;
-right: 24px;
-
+    position: absolute;
+    outline: none;
+    top: 24px;
+    right: 24px;
     background-color: var(--header-border);
     height: 24px;
     width: 24px;
     border-radius: 12px;
-    border-color: var(--header-border);
+    border: var(--header-border) solid 2px;
     padding: 0;
+    cursor: pointer;
+    fill: var(--logo-text-color-dark);
+}
+
+.close-button:hover {
+    background-color: var(--on-hover);
+    border: var(--on-hover) solid 2px;
+}
+
+.close-button svg {
+    width: 8px;
+    height: 8px;
+}
+
+.close-button svg:hover {
+    fill: var(--header-border);
 }
 
 .backdrop {
@@ -550,7 +586,7 @@ right: 24px;
     border-radius: 4px;
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
